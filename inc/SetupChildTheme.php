@@ -38,7 +38,7 @@ class SetupChildTheme {
 	 * Enqueue Theme Styles and Scripts
 	 */
 	public function enqueue_scripts() {
-		$parent_style  = 'dahtheme-child-style';
+		$parent_style  = 'dahtheme-style';
 		wp_enqueue_style( 'theme-fonts', $this->theme_fonts_url(), array(), $this->version );
 		wp_enqueue_style( 'dahtheme-child-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), $this->version, 'all' );
 		wp_enqueue_script( 'dahtheme-child-script', get_stylesheet_directory_uri() . '/assets/theme/app.min.js', array('jquery'), $this->version, true );
@@ -98,3 +98,6 @@ class SetupChildTheme {
 	}
 
 }
+
+$child_tags  = new ChildTemplateTags;
+$child_hooks = new ChildHooks;
