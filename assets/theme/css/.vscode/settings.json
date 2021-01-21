@@ -1,0 +1,27 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/"
+        },
+        // {
+        //     "extensionName": ".min.css",
+        //     "format": "compressed",
+        //     "savePath": "/dist/css"
+        // }
+    ],
+    "liveSassCompile.settings.excludeList":
+        // "**/node_modules/**",
+        // "**/_scss/bootstrap/**",
+        // "**/_scss/fontawesome/**",
+        // ".vscode/**",
+        "(/|\\\\|^)(?!_)(\\w+)\\.(css|js|sass|less|scss)$"
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "compile-hero.disable-compile-files-on-did-save-code": false
+}
