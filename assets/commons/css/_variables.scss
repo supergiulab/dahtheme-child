@@ -4,29 +4,47 @@
  * @package dahtheme-child
  */
 /* Colors */
-$primary:   #b1993e;
-$secondary: #886b5a;
-$tertiary:  #684f45;
-$light:     #f5f4f4;
-$dark:      #4a4746;
+$primary:   #50bae6;
+$secondary: #cc32bb;
+$tertiary:  #ff6200;
+$light:     #f7f7f7;
+$dark:      #222;
+$white:     #fff;
+$black:     #000;
 
 $theme-colors: (
 	"primary":    $primary,
 	"secondary":  $secondary,
 	"tertiary":   $tertiary,
+	"white":      $white,
+	"black":      $black,
 	"light":      $light,
 	"dark":       $dark
 );
 
-$body-color:                  $dark !default;
+/* Colors for this Theme */
+@each $name, $color in $theme-colors {
+	.has-theme-color-#{$name}-background-color { background-color: #{$color} !important; }
+	.has-theme-color-#{$name}-color { color: #{$color} !important; }
+
+	a.has-theme-color-#{$name}-background-color {
+		&:hover, &:focus, &:active { background-color: darken($color, 6%) !important; }
+	}
+
+	.is-style-outline a.has-theme-color-#{$name}-color {
+		border-color: #{$color} !important;
+
+		&:hover, &:focus, &:active {
+			background-color: #{$color} !important;
+			color: $light !important;
+		}
+	}
+}
 
 /* Fonts */
-$font-family-sans-serif:      "PT Sans Narrow", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:			  "EB Garamond", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:      "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:           "EB Garamond", Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-/* Base */
-$font-family-base:            $font-family-serif;
 
 /* Headings */
 $headings-font-family:        $font-family-serif;
