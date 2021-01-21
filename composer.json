@@ -1,0 +1,24 @@
+{
+    "name": "supergiulab/dahtheme-child",
+    "description": "Starter child theme for WordPress development",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "SuPerGiu LAB",
+            "email": "me@supergiulab.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload" : {
+        "psr-4" : {
+            "UpInc\\" : "../dahtheme/inc",
+            "Inc\\" : "./inc",
+            "Utils\\" : "./inc/utilities",
+            "Add\\" : "./inc/addons",
+            "Options\\" : "./inc/addons/options",
+            "Modules\\" : "./inc/addons/modules"
+        }
+    }
+}

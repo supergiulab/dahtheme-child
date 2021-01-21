@@ -1,0 +1,45 @@
+/**
+ * Mixins
+ * 
+ * @package dahtheme-child
+ */
+/* Font Awesome Icon Solid */
+@mixin icon-solid($icon) {
+	@include fa-icon;
+	@extend .fas;
+	content: fa-content($icon);
+}
+
+/* Font Awesome Icon Brand */
+@mixin icon-brand($icon) {
+	@include fa-icon;
+	@extend .fab;
+	content: fa-content($icon);
+}
+
+// =5 Transform TranslateX
+@mixin translateX($space) {
+	-webkit-transform: translateX($space);
+	-ms-transform: translateX($space);
+	transform: translateX($space);
+}
+
+// =6 Transform TranslateY
+@mixin translateY($space) {
+	-webkit-transform: translateY($space);
+	-ms-transform: translateY($space);
+	transform: translateY($space);
+}
+
+// =7 Transform Translate
+@mixin translate($spaceX, $spaceY, $important: false) {
+	@if $important {
+		-webkit-transform: translate($spaceX, $spaceY) !important;
+		-ms-transform: translate($spaceX, $spaceY) !important;
+		transform: translate($spaceX, $spaceY) !important;
+	} @else {
+		-webkit-transform: translate($spaceX, $spaceY);
+		-ms-transform: translate($spaceX, $spaceY);
+		transform: translate($spaceX, $spaceY);
+	}
+}

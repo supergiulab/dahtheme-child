@@ -1,0 +1,48 @@
+/*!
+Theme Name: DahTheme Child Theme
+Theme URI: https://supergiulab.com/
+Author: SuPerGiu LAB
+Author URI: https://supergiulab.com/
+Description: Custom theme for ...
+Version: 1.0.0
+Template: dahtheme
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dahtheme-child
+This theme, like WordPress, is licensed under the GPL.
+*/
+/* Vendors */
+@import "vendors";
+
+/* Mixins */
+@import "../../commons/css/mixins";
+
+/* Mixins */
+@import "../../commons/css/variables";
+
+/* Layout */
+@import "layout";
+
+/* Typo */
+@import "typo";
+
+/* UI */
+@import "ui";
+
+/* Header */
+@import "header";
+
+/* Footer */
+@import "footer";
+
+/* Login */
+@import "login";
+
+/* Pages */
+@import "pages";
+
+/* Front Page */
+@import "frontPage";
+
+/* CPTs */
+// @import "cpt";
