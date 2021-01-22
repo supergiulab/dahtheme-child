@@ -82,11 +82,11 @@ class SetupChildTheme {
 			$fonts[] = 'EB+Garamond:400,700';
 		}
 
-		/* translators: If there are characters in your language that are not supported by PT Sans Narrow, translate this to 'off'. Do not translate into your own language. */
-		if ( 'off' !== _x( 'on', 'PT Sans Narrow font: on or off', 'dahtheme-child' ) ) {
-			$fonts[] = 'PT+Sans+Narrow:400,700';
+		/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
+		if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'dahtheme' ) ) {
+			$fonts[] = 'Open+Sans:400,600,700';
 		}
-
+		
 		if ( $fonts ) {
 		    $fonts_url = add_query_arg( array(
 		        'family' => implode( '|', $fonts ),
